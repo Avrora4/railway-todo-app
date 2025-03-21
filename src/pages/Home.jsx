@@ -90,9 +90,22 @@ export const Home = () => {
             {lists.map((list, key) => {
               const isActive = list.id === selectListId;
               return (
-                <li key={key} className={`list-tab-item ${isActive ? "active" : ""}`} onClick={() => handleSelectList(list.id)}>
-                  {list.title}
-                </li>
+                <div
+                  key={key}
+                  role='tab'
+                  aria-controls={`List-${list.id}`}
+                  aria-selected={isActive}
+                  tabIndex={0}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter") {
+                      handleSelectList(list.id);
+                    }
+                  }}
+                >
+                  <li className={`list-tab-item ${isActive ? "active" : ""}`} onClick={() => handleSelectList(list.id)}>
+                    {list.title}
+                  </li>
+                </div>
               );
             })}
           </ul>
