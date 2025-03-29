@@ -1,12 +1,13 @@
 @charset "utf-8";
 
 .signin {
-  width: 500px;
-  margin: 0 auto;
+  width: auto;
+  margin: 10px auto;
 }
 
 .signin-form {
   margin: 25px 0;
+  width: 90%;
 }
 
 .email-label, .password-label {
@@ -14,10 +15,10 @@
 }
 
 .email-input, .password-input {
-  width: 100%;
+  width: 80%;
   font-size: large;
   height: 30px;
-  margin-bottom: 25px;
+  margin: 10px;
 }
 
 .signin-button {
@@ -26,6 +27,7 @@
   width: 100px;
   height: 40px;
   border-radius: 5px;
+  margin: 10px;
 }
 
 .error-message {
